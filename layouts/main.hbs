@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta
+      name='viewport'
+      content='width=device-width, user-scalable=no, minimal-ui'
+    />
+
+    <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+
+    <style>
+      {{{css}}}
+    </style>
+
+    <link rel='stylesheet' href='/stylesheets/page.css' />
+
+    {{#if development}}
+      <link rel='stylesheet' href='/stylesheets/development.css' />
+    {{/if}}
+  </head>
+
+  <body>
+    <div id='resume'>
+      {{{body}}}
+
+      {{#if development}}
+        <div class='first-page'></div>
+      {{/if}}
+    </div>
+  </body>
+</html>
