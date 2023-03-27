@@ -1,0 +1,8 @@
+{{#if resume.experience.length}}
+<section id='experience'>
+  <h2>Experience</h2>
+  {{#each resume.experience}}
+  {{> templates/list}}
+  {{/each}}
+</section>
+{{/if}}
