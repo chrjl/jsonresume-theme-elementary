@@ -1,51 +1,50 @@
 <div class='item'>
 
   {{#if position}}
-    <h3 class='position'>{{position}}</h3>
+  <h3 class='position'>{{position}}</h3>
 
-    <span class='date'>
-      {{#if startDate}}
-        <span class='startDate'>
-          {{startDate}}
-        </span>
-      {{/if}}
-      {{#if endDate}}
-        <span class='endDate'>
-          {{#if startDate}}to{{/if}}
-          {{endDate}}
-        </span>
-      {{/if}}
-    </span>
-
-    {{#if name}}
-      <span class='divider'>|</span>
-      <span class='name'>
-        {{name}}
-      </span>
-    {{/if}}
-    {{#if department}}
-      <span class='divider'>|</span>
-      <span class='name'>
-        {{department}}
-      </span>
-    {{/if}}
+  {{#if name}}
+  <span class='name'>
+    {{name}}
     {{#if location}}
-      <span class='location'>
-        ({{~location~}})
-      </span>
+    <span class='location'>
+      ({{~location~}})
+    </span>
     {{/if}}
+
+    {{#if department}}
+    <span class='divider'>|</span>
+    <span class='name'>{{department}}</span>
+    {{/if}}
+    <span class='divider'>|</span>
+  </span>
   {{/if}}
+  {{/if}}
+  <span class='date'>
+    {{#if startDate}}
+    <span class='startDate'>
+      {{startDate}}
+    </span>
+    {{/if}}
+    {{#if endDate}}
+    <span class='endDate'>
+      {{#if startDate}}to{{/if}}
+      {{endDate}}
+    </span>
+    {{/if}}
+  </span>
+
 
   {{#if summary}}
-    <div class='summary'>
-      {{{summary}}}
-    </div>
+  <div class='summary'>
+    {{{summary}}}
+  </div>
   {{/if}}
   {{#if highlights.length}}
-    <ul class='highlights'>
-      {{#each highlights}}
-        <li>{{{this}}}</li>
-      {{/each}}
-    </ul>
+  <ul class='highlights'>
+    {{#each highlights}}
+    <li>{{{this}}}</li>
+    {{/each}}
+  </ul>
   {{/if}}
 </div>
