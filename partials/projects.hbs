@@ -1,0 +1,40 @@
+{{#if resume.projects.length}}
+<section id='projects'>
+  <h2>Portfolio highlights</h2>
+  <div class='vertical-description-container'>
+    {{#each resume.projects}}
+    {{#unless hidden}}
+    <div class='vertical-description'>
+      {{#if name}}
+      <div class='name'>
+        <heading>{{name}}</heading>
+      </div>
+      {{/if}}
+
+      {{#if description}}
+      <span class='description'>{{description}}</span>
+      {{/if}}
+      {{#if endDate}}
+      <span class='endDate'>({{endDate}})</span>
+      {{/if}}
+
+      {{#if url.length}}
+      {{#each url}}
+      <span class='url'><a href={{this}}>{{this}}</a></span>
+      <br>
+      {{/each}}
+      {{/if}}
+
+      {{#if highlights.length}}
+      <ul class='highlights'>
+        {{#each highlights}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+    {{/unless}}
+    {{/each}}
+  </div>
+</section>
+{{/if}}

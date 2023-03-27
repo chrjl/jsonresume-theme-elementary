@@ -2,11 +2,11 @@
 <section id='education'>
   <h2>Education</h2>
   {{#each resume.education}}
-  <div class='qualification'>
+  <div class='vertical-description'>
     {{#if institution}}
-    <h3>
-      <div class='institution'>{{institution}}</div>
-    </h3>
+    <div class='institution'>
+      <heading>{{institution}}</heading>
+    </div>
     {{/if}}
     {{#if studyType}}
     <span class='studyType'>{{studyType}}</span>
