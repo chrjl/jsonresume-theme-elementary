@@ -3,6 +3,25 @@
   <h2>Experience</h2>
   {{#each resume.experience}}
   {{> templates/list}}
+
+  {{#if categories.length}}
+  <div class="horizontal-description-container">
+    {{#each categories}}
+    <div class="horizontal-description">
+      <div class="name">
+        {{name}}
+      </div>
+      {{#if keywords.length}}
+      <div class="keywords">
+        {{#each keywords}}
+        {{{this}}}{{#if @last}}{{else}}<br>{{/if}}
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
   {{/each}}
 </section>
 {{/if}}
