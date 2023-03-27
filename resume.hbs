@@ -1,14 +1,19 @@
 {{> basics }}
-{{> languages }}
 {{> skills }}
-{{> education }}
+{{> projects }}
 {{> experience }}
+{{> education }}
+
 {{#if development}}
+  <hr style="margin-top: 2em">
   {{> work }}
+  <hr style="margin-top: 2em">
+  {{> interests }}
+  <hr style="margin-top: 2em">
+  {{> languages }}
 {{/if}}
 
-{{> volunteer }}
-{{> awards }}
-{{> publications }}
-{{> interests }}
-{{> references }}
+{{> boilerplate/volunteer }}
+{{> boilerplate/awards }}
+{{> boilerplate/publications }}
+{{> boilerplate/references }}
