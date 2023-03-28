@@ -1,8 +1,9 @@
 {{#if resume.experience.length}}
 <section id='experience'>
   <h2>Experience</h2>
+
   {{#each resume.experience}}
-  {{> templates/list}}
+  {{> work-details}}
 
   {{#if categories.length}}
   <div class="horizontal-description-container">
@@ -11,6 +12,7 @@
       <div class="name">
         {{name}}
       </div>
+
       {{#if keywords.length}}
       <div class="keywords">
         {{#each keywords}}
@@ -22,6 +24,7 @@
     {{/each}}
   </div>
   {{/if}}
+
   {{/each}}
 </section>
 {{/if}}

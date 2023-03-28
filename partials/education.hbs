@@ -1,6 +1,7 @@
 {{#if resume.education.length}}
 <section id='education'>
   <h2>Education</h2>
+
   {{#each resume.education}}
   <div class='vertical-description'>
     {{#if institution}}
@@ -8,14 +9,18 @@
       <heading>{{institution}}</heading>
     </div>
     {{/if}}
+
     {{#if studyType}}
     <span class='studyType'>{{studyType}}</span>
     {{/if}}
+
     {{#if endDate}}
     <span class='endDate'>({{endDate}})</span>
     {{/if}}
+
     {{#if area}}
-    <span class='area'>- {{area}}</span>
+    <span class='divider'>|</span>
+    <span class='area'>{{area}}</span>
     {{/if}}
 
     {{#if courses.length}}
@@ -25,7 +30,6 @@
       {{/each}}
     </ul>
     {{/if}}
-
   </div>
   {{/each}}
 </section>

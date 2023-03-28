@@ -1,15 +1,18 @@
 {{#resume.basics}}
 <h1>{{name}}</h1>
 <h2>{{{label}}}</h2>
+
 <section id='basics'>
   <div class='contact'>
     {{#if email}}
     <span class='email'><a href='mailto:{{email}}'>{{email}}</a></span>
     {{/if}}
+
     {{#if phone}}
     <span class='divider'>|</span>
     <span class='phone'>{{phone}}</span>
     {{/if}}
+
     {{#if website}}
     <span class='divider'>|</span>
     <span class='website'><a href={{website}}>{{website}}</a></span>
@@ -18,9 +21,9 @@
 
   {{#location}}
   <span class='address'>
-    {{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}{{#if
-    countryCode
-    }}, {{countryCode}}{{/if}}
+    {{#if city}}{{city}}{{/if}}<!--
+ -->{{#if region}}, {{region}}{{/if}}<!--
+ -->{{#if countryCode }}, {{countryCode}}{{/if}}
   </span>
   {{/location}}
 

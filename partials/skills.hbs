@@ -1,6 +1,7 @@
 {{#if resume.skills.length}}
 <section id="skills">
   {{!-- <h2>Skills</h2> --}}
+
   {{#each resume.skills}}
   <div class="horizontal-description">
     {{#if name}}
@@ -8,6 +9,7 @@
       {{name}}
     </div>
     {{/if}}
+
     {{#if keywords.length}}
     <div class="keywords">
       {{#each keywords}}

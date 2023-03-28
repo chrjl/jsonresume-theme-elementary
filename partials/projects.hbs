@@ -1,9 +1,9 @@
 {{#if resume.projects.length}}
 <section id='projects'>
   <h2>Portfolio highlights</h2>
+
   <div class='vertical-description-container'>
-    {{#each resume.projects}}
-    {{#unless hidden}}
+    {{#each resume.projects}}{{#unless hidden}}
     <div class='vertical-description'>
       {{#if name}}
       <div class='name'>
@@ -14,6 +14,7 @@
       {{#if description}}
       <span class='description'>{{description}}</span>
       {{/if}}
+
       {{#if endDate}}
       <span class='endDate'>({{endDate}})</span>
       {{/if}}
@@ -33,8 +34,7 @@
       </ul>
       {{/if}}
     </div>
-    {{/unless}}
-    {{/each}}
+    {{/unless}}{{/each}}
   </div>
 </section>
 {{/if}}

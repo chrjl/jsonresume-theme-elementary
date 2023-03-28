@@ -1,6 +1,7 @@
 {{#if resume.interests.length}}
 <section id="interests">
   <h2>Interests</h2>
+
   {{#each resume.interests}}
   <div class="vertical-description">
     {{#if name}}
@@ -8,6 +9,7 @@
       <heading>{{name}}</heading>
     </div>
     {{/if}}
+
     {{#if keywords.length}}
     <ul class="keywords">
       {{#each keywords}}
