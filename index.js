@@ -9,11 +9,11 @@ const hbs = create({
   partialsDir: path.join(__dirname, 'partials'),
 });
 
-const css = fs.readFileSync(path.join(__dirname, '/style.css'), "utf-8");
-const template = path.join(__dirname, 'resume.hbs');
+async function render(resume, development = false) {
+  const css = fs.readFileSync(path.join(__dirname, '/style.css'), "utf-8");
+  const template = path.join(__dirname, 'resume.hbs');
 
-async function render(resume) {
-  return hbs.renderView(template, { css, resume, development: true });
+  return hbs.renderView(template, { css, resume, development });
 }
 
 module.exports = {

@@ -3,11 +3,19 @@
   <h2>Portfolio highlights</h2>
 
   <div class='vertical-description-container'>
-    {{#each resume.projects}}{{#unless hidden}}
-    <div class='vertical-description'>
+
+    {{#*inline "content"}}
+    <div class='vertical-description {{status}}'>
       {{#if name}}
       <div class='name'>
-        <heading>{{name}}</heading>
+        <heading>
+          {{name}}
+          {{#if keywords}}
+          <span class="keywords">
+            ({{#each keywords}}{{this}}{{#if @last}}{{else}}, {{/if}}{{/each}})
+          </span>
+          {{/if}}
+        </heading>
       </div>
       {{/if}}
 
@@ -29,12 +37,30 @@
       {{#if highlights.length}}
       <ul class='highlights'>
         {{#each highlights}}
-        <li>{{this}}</li>
+        <li>{{{this}}}</li>
         {{/each}}
       </ul>
       {{/if}}
     </div>
-    {{/unless}}{{/each}}
+    {{/inline}}
+
+    {{#if development}}
+
+    {{#each resume.projects}}
+    {{> content}}
+    {{/each}}
+
+    {{else}}
+
+    {{#each resume.projects}}
+    {{#unless hidden}}
+    {{> content}}
+    {{/unless}}
+    {{/each}}
+
+    {{/if}}
+
+
   </div>
 </section>
 {{/if}}

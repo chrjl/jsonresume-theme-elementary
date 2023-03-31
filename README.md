@@ -19,6 +19,7 @@ Extends the [JSON Resume schema](https://jsonresume.org/schema/):
 - Adds a `experience` field to serve as an alternative to `work`, with  functional-style resume as a use case.  Shares its template with `work`.
 - Adds a `categories` property to the `experience` (and `work`), with a use case of further breaking down the functional style of resume. Copies its template from the `skills` field.
 - Adds a `department` property to `work`/`experience` fields, to extend `name` field.
+- Adds a `status` property to `projects`, allowing for different CSS styling for projects at different stages of development
 
 Adds a Boolean `development` key to the context.
 
